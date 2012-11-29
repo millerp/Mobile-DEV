@@ -1,0 +1,78 @@
+<?php
+
+namespace App ;
+
+use Absolute\View\Layout ,
+    Absolute\Router\Route ,
+    Absolute\Application\Bootstrap AS AbsBootstrap ,
+    Absolute\Registry ;
+
+class Bootstrap extends AbsBootstrap {
+
+    protected function initMongo () {
+        $mongo = new \Mongo ( "mongodb://millerp:81268445@ds033617.mongolab.com:33617/boximagens" ) ;
+        Registry::set ( 'mongo' , $mongo ) ;
+    }
+
+    protected function initRouter () {
+        /*
+         *
+         * RoutesF
+          Home - /
+          Cadastro /cadastro
+          →Termos de Uso - Contem os termos para uso do sistema.
+          →Contato - Contem dados para contato com o desenvolvedor do sistema.
+          →Login - Efetua o login para ter acesso ao painel de usuario ou de administrador do sistema.
+          →Painel de Usuário /painel
+          →Conta - /
+          → Imagens → Exibe as imagens enviadas pelo usuario.
+          →Alterar dados – Altera os dados da conta.
+         */
+
+        $this -> getRouter ()
+                -> addRoute ( new Route ( 'home page' , 'home' , 'index' , '#^$#i' ) )
+                -> addRoute ( new Route ( 'home' , 'home' ) )
+                -> addRoute ( new Route ( 'busca' , 'busca' ) )
+                -> addRoute ( new Route ( 'contato' , 'contato' ) )
+                -> addRoute ( new Route ( 'edit' , 'painel' , 'edit' ) )
+                -> addRoute ( new Route ( 'sair' , 'painel' , 'sair' ) )
+                -> addRoute ( new Route ( 'teste' , 'teste' ) )
+                -> addRoute ( new Route ( 'login' , 'painel' , 'login' ) )
+                -> addRoute ( new Route ( 'painel' , 'painel' , 'login' ) )
+                -> addRoute ( new Route ( 'minhas-mensagens' , 'painel' , 'mensagens' ) )
+                -> addRoute ( new Route ( 'minhas-imagens' , 'painel' , 'gimagens' ) )
+                -> addRoute ( new Route ( 'gerenciar-usuarios' , 'painel' , 'gusuarios' ) )
+                -> addRoute ( new Route ( 'gerenciar-mensagens' , 'painel' , 'gmensagens' ) )
+        ;
+    }
+
+    protected function initLayout () {
+        Layout::getInstance ()
+                -> getHeaderStyle ()
+                -> append ( '/statics/bootstrap/assets/css/bootstrap.css' )
+                -> append ( '/statics/bootstrap/assets/css/bootstrap-responsive.css' )
+                -> append ( '/statics/bootstrap/assets/css/docs.css' )
+                -> append ( '/statics/bootstrap/assets/js/google-code-prettify/prettify.css' )
+        ;
+
+        Layout::getInstance ()
+                -> getHeaderScript ()
+                -> append ( '/statics/bootstrap/assets/js/jquery.js' )
+                -> append ( '/statics/bootstrap/assets/js/google-code-prettify/prettify.js' )
+                -> append ( '/statics/bootstrap/assets/js/bootstrap-transition.js' )
+                -> append ( '/statics/bootstrap/assets/js/bootstrap-alert.js' )
+                -> append ( '/statics/bootstrap/assets/js/bootstrap-modal.js' )
+                -> append ( '/statics/bootstrap/assets/js/bootstrap-dropdown.js' )
+                -> append ( '/statics/bootstrap/assets/js/bootstrap-scrollspy.js' )
+                -> append ( '/statics/bootstrap/assets/js/bootstrap-tab.js' )
+                -> append ( '/statics/bootstrap/assets/js/bootstrap-tooltip.js' )
+                -> append ( '/statics/bootstrap/assets/js/bootstrap-popover.js' )
+                -> append ( '/statics/bootstrap/assets/js/bootstrap-button.js' )
+                -> append ( '/statics/bootstrap/assets/js/bootstrap-collapse.js' )
+                -> append ( '/statics/bootstrap/assets/js/bootstrap-carousel.js' )
+                -> append ( '/statics/bootstrap/assets/js/bootstrap-typeahead.js' )
+                -> append ( 'http://platform.twitter.com/widgets.js' )
+        ;
+    }
+
+}

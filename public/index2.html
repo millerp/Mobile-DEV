@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Móveis Simonetti - MOBILE</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv='Content-Type' content='Type=text/html; charset=utf-8'>
+  </head>
+  <body>
+    <div data-role="page" id="one" data-title="Pagina UM">
+
+      <div role="banner" class="ui-header ui-bar-a" data-role="header">
+        <h1 class="ui-title">I'm a header</h1>
+        <a data-theme="a" data-wrapperels="span" href="#popupLogin" data-rel="popup" data-iconshadow="true" data-shadow="true" data-corners="true" href="index.html" data-icon="star" class="ui-btn-right ui-btn ui-btn-up-a ui-shadow ui-btn-corner-all ui-btn-icon-left"><span class="ui-btn-inner ui-btn-corner-all"><span class="ui-btn-text">Login</span><span class="ui-icon ui-icon-gear ui-icon-shadow">&nbsp;</span></span></a>
+      </div><!-- /header -->
+      <div data-role="content" >
+
+        <div data-role="navbar">
+          <ul>
+            <li><a href="#popupBasic1" data-rel="popup" data-theme="a" >One</a></li>
+            <li><a href="#popupBasic2" data-rel="popup" data-theme="b">Two</a></li>
+            <li><a href="#popupBasic3" data-rel="popup" data-theme="c">Three</a></li>
+            <li><a href="#popupBasic4" data-rel="popup" data-theme="d">One</a></li>
+            <li><a href="#popupBasic5" data-rel="popup" data-theme="e">Three</a></li>
+          </ul>
+        </div><!-- /navbar -->
+
+        <div data-role="popup" id="popupLogin" data-theme="a" class="ui-corner-all">
+          <form>
+            <div style="padding:10px 20px;">
+              <h3>Please sign in</h3>
+              <label for="un" class="">Username:</label>
+              <input type="text" name="user" id="un" value="" placeholder="username" data-theme="a" />
+
+              <label for="pw" class="">Password:</label>
+              <input type="password" name="pass" id="pw" value="" placeholder="password" data-theme="a" />
+
+              <button type="submit" data-theme="b">Sign in</button>
+            </div>
+          </form>
+        </div>
+
+        <div data-role="popup" id="popupBasic1" data-theme="e" data-transition="flip" data-overlay-theme="a">
+          <p>UM<p>
+        </div>
+        <div data-role="popup" id="popupBasic2" data-transition="fade">
+          <p>DOIS<p>
+        </div>
+        <div data-role="popup" id="popupBasic3" data-transition="flip">
+          <p>TRÊS<p>
+        </div>
+        <div data-role="popup" id="popupBasic4" data-theme="b" data-overlay-theme="e">
+          <p>UM<p>
+        </div>
+        <div data-role="popup" id="popupBasic5" data-theme="c" data-transition="flip" data-overlay-theme="d">
+          <p>DOIS<p>
+        </div>
+        <h2>One</h2>
+
+        <p>I have an <code>id</code> of "one" on my page container. I'm first in the source order so I'm shown when the page loads.</p>
+
+        <p>This is a multi-page boilerplate template that you can copy to build your first jQuery Mobile page. This template contains multiple "page" containers inside, unlike a <a href="pages/teste.html"> single page template</a> that has just one page within it.</p>
+        <p>Just view the source and copy the code to get started. All the CSS and JS is linked to the jQuery CDN versions so this is super easy to set up. Remember to include a meta viewport tag in the head to set the zoom level.</p>
+        <p>You link to internal pages by referring to the <code>id</code> of the page you want to show. For example, to <a href="#two" >link</a> to the page with an <code>id</code> of "two", my link would have a <code>href="#two"</code> in the code.</p>
+
+        <h3>Show internal pages:</h3>
+        <p><a href="#two" data-role="button">Show page "two"</a></p>
+        <p><a href="#teste" data-role="button">Pagina TESTE</a></p>
+        <p><a href="#popup" data-role="button" data-rel="dialog" data-transition="pop">Show page "popup" (as a dialog)</a></p>
+      </div><!-- /content -->
+
+      <div data-role="footer" data-theme="d">
+        <h4>Page Footer</h4>
+      </div><!-- /footer -->
+    </div><!-- /page one -->
+
+
+    <!-- Start of second page: #two -->
+    <div data-role="page" id="two" data-theme="a" data-title="Pagina DOIS">
+
+      <div data-role="header">
+        <h1>Two</h1>
+      </div><!-- /header -->
+
+      <div data-role="content" data-theme="a">
+        <h2>Two</h2>
+        <p>I have an id of "two" on my page container. I'm the second page container in this multi-page template.</p>
+        <p>Notice that the theme is different for this page because we've added a few <code>data-theme</code> swatch assigments here to show off how flexible it is. You can add any content or widget to these pages, but we're keeping these simple.</p>
+        <p><a href="#one" data-direction="reverse" data-role="button" data-theme="b">Back to page "one"</a></p>
+
+      </div><!-- /content -->
+
+      <div data-role="footer">
+        <h4>Page Footer</h4>
+      </div><!-- /footer -->
+    </div><!-- /page two -->
+
+
+    <!-- Start of third page: #popup -->
+    <div data-role="page" id="popup" data-title="Pagina TRES">
+
+      <div data-role="header" data-theme="e">
+        <h1>Dialog</h1>
+      </div><!-- /header -->
+
+      <div data-role="content" data-theme="d">
+        <h2>Popup</h2>
+        <p>I have an id of "popup" on my page container and only look like a dialog because the link to me had a <code>data-rel="dialog"</code> attribute which gives me this inset look and a <code>data-transition="pop"</code> attribute to change the transition to pop. Without this, I'd be styled as a normal page.</p>
+        <p><a href="#one" data-rel="back" data-role="button" data-inline="true" data-icon="back">Back to page "one"</a></p>
+      </div><!-- /content -->
+
+      <div data-role="footer">
+        <h4>Page Footer</h4>
+      </div><!-- /footer -->
+    </div><!-- /page popup -->
+
+    <div data-role="page" id="teste" data-title="Pagina TESTE">
+
+      <div data-role="header" data-theme="a">
+        <a href="index.html" data-role="button" data-icon="home" data-theme="a" data-iconpos="notext">Página Principal</a> <h1>Página TESTE de Tabelas</h1>
+      </div><!-- /header -->
+
+      <div data-role="content" data-theme="d">
+        <div data-role="controlgroup" data-type="horizontal" data-mini="true">
+          <a href="index.html" data-role="button">BTN 1</a>
+          <a href="index.html" data-role="button">BTN 2</a>
+          <a href="index.html" data-role="button">BTN 3</a>
+        </div>
+
+        <table data-role="table" id="movie-table" data-mode="reflow" class="breakpoint-stack-wide">
+          <thead>
+            <tr>
+              <th data-priority="1">Rank</th>
+              <th data-priority="persist">Movie Title</th>
+              <th data-priority="2">Year</th>
+              <th data-priority="3"><abbr title="Rotten Tomato Rating">Rating</abbr></th>
+              <th data-priority="4">Reviews</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>1</th>
+              <td><a href="http://en.wikipedia.org/wiki/Citizen_Kane" data-rel="external">Citizen Kane</a></td>
+              <td>1941</td>
+              <td>100%</td>
+              <td>74</td>
+            </tr>
+            <tr>
+              <th>2</th>
+              <td><a href="http://en.wikipedia.org/wiki/Casablanca_(film)" data-rel="external">Casablanca</a></td>
+              <td>1942</td>
+              <td>97%</td>
+              <td>64</td>
+            </tr>
+            <tr>
+              <th>3</th>
+              <td><a href="http://en.wikipedia.org/wiki/The_Godfather" data-rel="external">The Godfather</a></td>
+              <td>1972</td>
+              <td>97%</td>
+              <td>87</td>
+            </tr>
+            <tr>
+              <th>4</th>
+              <td><a href="http://en.wikipedia.org/wiki/Gone_with_the_Wind_(film)" data-rel="external">Gone with the Wind</a></td>
+              <td>1939</td>
+              <td>96%</td>
+              <td>87</td>
+            </tr>
+            <tr>
+              <th>5</th>
+              <td><a href="http://en.wikipedia.org/wiki/Lawrence_of_Arabia_(film)" data-rel="external">Lawrence of Arabia</a></td>
+              <td>1962</td>
+              <td>94%</td>
+              <td>87</td>
+            </tr>
+            <tr>
+              <th>6</th>
+              <td><a href="http://en.wikipedia.org/wiki/Dr._Strangelove" data-rel="external">Dr. Strangelove Or How I Learned to Stop Worrying and Love the Bomb</a></td>
+              <td>1964</td>
+              <td>92%</td>
+              <td>74</td>
+            </tr>
+            <tr>
+              <th>7</th>
+              <td><a href="http://en.wikipedia.org/wiki/The_Graduate" data-rel="external">The Graduate</a></td>
+              <td>1967</td>
+              <td>91%</td>
+              <td>122</td>
+            </tr>
+            <tr>
+              <th>8</th>
+              <td><a href="http://en.wikipedia.org/wiki/The_Wizard_of_Oz_(1939_film)" data-rel="external">The Wizard of Oz</a></td>
+              <td>1939</td>
+              <td>90%</td>
+              <td>72</td>
+            </tr>
+            <tr>
+              <th>9</th>
+              <td><a href="http://en.wikipedia.org/wiki/Singin%27_in_the_Rain" data-rel="external">Singin' in the Rain</a></td>
+              <td>1952</td>
+              <td>89%</td>
+              <td>85</td>
+            </tr>
+            <tr>
+              <th>10</th>
+              <td class="title"><a href="http://en.wikipedia.org/wiki/Inception" data-rel="external">Inception</a></td>
+              <td>2010</td>
+              <td>84%</td>
+              <td>78</td>
+            </tr>
+          </tbody>
+        </table>
+      </div><!-- /content -->
+      <div data-role="controlgroup" data-mini="true" data-type="horizontal" data-iconpos="right" >
+        <a data-theme="c" href="#" data-role="button" data-icon="arrow-u" data-iconpos="notext">Up</a>
+        <a data-theme="a" href="#" data-role="button" data-icon="delete" data-iconpos="notext">Delete</a>
+        <a data-theme="c" href="#" data-role="button" data-icon="arrow-d" data-iconpos="notext">Down</a>
+      </div>
+      <div data-role="footer">
+        <h4>Page Footer</h4>
+      </div><!-- /footer -->
+    </div><!-- /page popup -->
+  </body>
+</html>
