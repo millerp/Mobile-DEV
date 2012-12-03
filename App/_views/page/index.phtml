@@ -2,7 +2,7 @@
 if ($this->view->pagina != null) {
   foreach ($this->view->pagina as $te):
     ?>
-    <div data-role="page" id="Pagina" data-theme="d" data-title="<?= $te['titulo']; ?>">
+    <div data-role="page" id="Pagina" data-theme="a" data-content-theme="c" data-title="<?= $te['titulo']; ?>">
 
       <div data-role="header" data-theme="b" data-position="fixed">
         <a title="Home" href="/" data-icon="home" data-iconpos="notext">Home</a>
@@ -11,7 +11,7 @@ if ($this->view->pagina != null) {
 
       <div data-role="content">
 
-        <?= base64_decode($te['conteudo']); ?>
+        <?=$te['conteudo']; ?>
 
       </div><!-- /content -->
 

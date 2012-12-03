@@ -1,42 +1,90 @@
-<!DOCTYPE html>
-<html>
+<div data-role="page" id="Pagina" data-theme="a" data-content-theme="c" data-title="teste">
 
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Single page template</title>
-   <link rel="stylesheet"  href="http://jquerymobile.com//branches/tables/css/themes/default/jquery.mobile.css" />
-   <link rel="stylesheet" href="http://jquerymobile.com//branches/tables/docs/_assets/css/jqm-docs.css"/>
+  <div data-role="header" data-theme="b" data-position="fixed">
+    <a title="Home" href="/" data-icon="home" data-iconpos="notext">Home</a>
+    <h1>Móveis Simonetti - teste2</h1>
+  </div><!-- /header -->
 
-   <script src="http://jquerymobile.com//branches/tables/js/jquery.js"></script>
-   <script src="http://jquerymobile.com//branches/tables/docs/_assets/js/jqm-docs.js"></script>
-   <script src="http://jquerymobile.com//branches/tables/js/"></script>
-    <script>
-      $(function() {
-        $( "#transitionExample" ).popup("open");
-        $( "#transitionExample" ).popup();
-      });
-          </script>
-</head>
+  <div data-role="content">
 
-<body>
+    <div data-role="collapsible-set" data-theme="c" data-content-theme="d">
+      <div data-role="collapsible" data-collapsed="false">
+        <h3>
+          Section Header
+        </h3>
+        <form action="">
+          <div data-role="fieldcontain">
+            <fieldset data-role="controlgroup">
+              <label for="textinput1">
+                Title
+              </label>
+              <input name="" id="textinput1" placeholder="" value="" type="text">
+            </fieldset>
+          </div>
+          <div data-role="fieldcontain">
+            <fieldset data-role="controlgroup">
+              <label for="textinput2">
+                Title
+              </label>
+              <input name="" id="textinput2" placeholder="" value="" type="text">
+            </fieldset>
+          </div>
+          <div data-role="fieldcontain">
+            <label for="selectmenu1">
+              Choose:
+            </label>
+            <select name="">
+              <option value="option1">
+                Option 1
+              </option>
+              <option value="value">
+                Option
+              </option>
+            </select>
+          </div>
+          <div id="checkboxes1" data-role="fieldcontain">
+            <fieldset data-role="controlgroup" data-type="vertical">
+              <legend>
+                Choose:
+              </legend>
+              <input id="checkbox1" name="" type="checkbox">
+              <label for="checkbox1">
+                Option
+              </label>
+            </fieldset>
+          </div>
+          <input value="Submit" type="submit">
+        </form>
+      </div>
+      <div data-role="collapsible">
+        <h3>
+          Section Header
+        </h3>
+        <ul data-role="listview" data-divider-theme="b" data-inset="true">
+          <li data-role="list-divider" role="heading">
+            Divider
+          </li>
+          <li data-theme="c">
+            <a href="#" data-transition="slide">
+              Button
+            </a>
+          </li>
+          <li data-theme="c">
+            <a href="#page1" data-transition="slide">
+              Button
+            </a>
+          </li>
+          <li data-theme="c">
+            <a href="#page1" data-transition="slide">
+              Button
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div><!-- /content -->
 
-<div data-role="page" data-title="Página de Teste">
-
-	<div data-role="header">
-		<h1>Single page</h1>
-	</div><!-- /header -->
-
-	<div data-role="content">
-		<p>This is a single page boilerplate template that you can copy to build your first jQuery Mobile page. Each link or form from here will pull a new page in via Ajax to support the animated page transitions.</p>
-		<p>Just view the source and copy the code to get started. All the CSS and JS is linked to the jQuery CDN versions so this is super easy to set up. Remember to include a meta viewport tag in the head to set the zoom level.</p>
-		<p>This template is standard HTML document with a single "page" container inside, unlike a <a href="/pages/index.php" data-ajax="true">multi-page template</a> that has multiple pages within it. We strongly recommend building your site or app as a series of separate pages like this because it's cleaner, more lightweight and works better without JavaScript.</p>
-	</div><!-- /content -->
-
-	<div data-role="footer">
-		<h4>Footer content</h4>
-	</div><!-- /footer -->
-</div><!-- /page -->
-
-</body>
-</html>
+  <div data-role="footer" data-theme="b" data-position="fixed">
+    <h4>Móveis Simonetti - 2005/12</h4>
+  </div><!-- /footer -->
+</div><!-- /page two -->

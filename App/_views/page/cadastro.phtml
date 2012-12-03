@@ -1,0 +1,65 @@
+<div data-role="page" id="cadastro" data-title="Cadastro">
+
+  <div data-role="header" data-theme="c">
+    <h1>Cadastro</h1>
+  </div><!-- /header -->
+  <div data-role="navbar" data-iconpos="left">
+    <ul>
+      <li><a href="/" data-theme="a">Home</a></li>
+      <li><a href="/cadastro" data-theme="d">Cadastro</a></li>
+      <li><a href="/termos" data-theme="a">Termos de Uso</a></li>
+      <li><a href="/contato" data-theme="a">Contato</a></li>
+      <li><a href="#popupLogin" data-theme="e" data-rel="popup">Login</a></li>
+    </ul>
+    <div data-role="popup" id="popupLogin" data-theme="a">
+      <form method="post" action="/">
+        <div style="padding:10px 20px;">
+          <h3>Faça o login</h3>
+          <label for="un">Usuario:</label>
+          <input type="text" name="user" id="un" value="" placeholder="Usuario" data-theme="e" />
+
+          <label for="pw">Senha:</label>
+          <input type="password" name="pass" id="pw" value="" placeholder="Senha" data-theme="e" />
+
+          <button type="submit" data-theme="b">Logar</button>
+        </div>
+      </form>
+    </div>
+  </div><!-- /navbar -->
+  <div data-role="content">
+    <form id="formCadastro" name="formElem" action="" method="post">
+
+      <label for="username">Login</label>
+      <input id="username" name="usuario" type="text" />
+
+      <label for="email">Email</label>
+      <input id="email" name="email" placeholder="exemplo@exemplo.com" type="email" AUTOCOMPLETE=OFF />
+
+      <label for="password">Senha</label>
+      <input id="password" name="senha" type="password" AUTOCOMPLETE=OFF />
+
+      <label for="name">Nome</label>
+      <input id="name" name="nome" type="text" AUTOCOMPLETE=OFF />
+
+      <label for="country">País</label>
+      <input id="country" name="pais" type="text" AUTOCOMPLETE=OFF />
+
+      <label for="phone">Telefone</label>
+      <input id="phone" name="telefone" placeholder="e.g. +351215555555" type="tel" AUTOCOMPLETE=OFF />
+
+      <label for="website">Website</label>
+      <input id="website" name="website" placeholder="e.g. http://www.google.com" type="url" AUTOCOMPLETE=OFF />
+
+      <input type="hidden" name="cadastrar" value="1" />
+      <input type="hidden" name="cargo" value="0" />
+      <input type="hidden" name="status" value="1" />
+
+      <button type="submit" name="enviar" id="registerButton" >Registrar</button>
+
+    </form>
+  </div><!-- /content -->
+
+  <div data-role="footer">
+    <h4>&copy; 2012</h4>
+  </div><!-- /footer -->
+</div><!-- /page -->
