@@ -1,0 +1,70 @@
+<div data-role="page" id="contato" data-title="Contato">
+
+  <div data-role="header" data-theme="c">
+    <h1>Contato</h1>
+  </div><!-- /header -->
+  <div data-role="navbar" data-iconpos="left">
+    <ul>
+      <li><a href="/" data-theme="a">Home</a></li>
+      <li><a href="/cadastro" data-theme="a">Cadastro</a></li>
+      <li><a href="/termos" data-theme="a">Termos de Uso</a></li>
+      <li><a href="/contato" data-theme="a">Contato</a></li>
+      <li><a href="#popupLogin" data-theme="e" data-rel="popup">Login</a></li>
+    </ul>
+    <div data-role="popup" id="popupLogin" data-theme="a">
+      <form method="post" action="/">
+        <div style="padding:10px 20px;">
+          <h3>Faça o login</h3>
+          <label for="un">Usuario:</label>
+          <input type="text" name="user" id="un" value="" placeholder="Usuario" data-theme="e" />
+
+          <label for="pw">Senha:</label>
+          <input type="password" name="pass" id="pw" value="" placeholder="Senha" data-theme="e" />
+
+          <button type="submit" data-theme="b">Logar</button>
+        </div>
+      </form>
+    </div>
+  </div><!-- /navbar -->
+  <div data-role="content">
+    <h1>Contato</h1>
+    <form method="post" action="" id="formContato">
+      <input type="hidden" name="postar" value="1" />
+
+      <input type="hidden" name="usuario" value="<?php
+if (isset($_SESSION['usuario'])) {
+  echo $_SESSION['usuario'];
+}
+?>" />
+      <input type="hidden" name="status" value="0" />
+      <input type="hidden" name="estado" value="0" />
+
+      <label for="nome">Nome Completo:</label>
+      <input type="text" id="nome" name="nome" value="<?php
+             if (isset($_SESSION['nomeuser'])) {
+               echo $_SESSION['nomeuser'];
+             }
+?>" minlength="4" />
+
+      <label for="email">Email:</label>
+      <input id="email" type="email" name="email" value="<?php
+             if (isset($_SESSION['emailuser'])) {
+               echo $_SESSION['emailuser'];
+             }
+?>" class="required" />
+
+      <label for="assunto">Assunto:</label>
+      <input type="text" id="assunto" name="assunto" minlength="10" maxlength="40" />
+
+      <label for="mensagem">Mensagem:</label>
+      <textarea name="mensagem" id="mensagem" minlength="20" maxlength="500"></textarea><br/>
+
+      <input type="submit" name="submit" value="Enviar" />
+    </form>
+
+  </div>
+
+  <div data-role="footer">
+    <h4>&copy; 2012</h4>
+  </div><!-- /footer -->
+</div><!-- /page -->
